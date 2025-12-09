@@ -6,7 +6,7 @@
       console.log("onload");
         const log = document.getElementById("log");
         log.innerText = h5vcc.accessibility.textToSpeech ? "tts enabled" : "tts disabled";
-        h5vcc.accessibility.onttexttospeechchange = (ev) => {
+        h5vcc.accessibility.ontexttospeechchange = (ev) => {
             document.getElementById("event-log").innerText = `tts change event (${ev.timeStamp})`;
         }
     });
