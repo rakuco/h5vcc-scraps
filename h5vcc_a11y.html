@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <script>
+    window.addEventListener('load', () => {
+      console.log("onload");
+        const log = document.getElementById("log");
+        log.innerText = h5vcc.accessibility.textToSpeech ? "tts enabled" : "tts disabled";
+        h5vcc.accessibility.onttexttospeechchange = (ev) => {
+            document.getElementById("event-log").innerText = `tts change event (${ev.timeStamp})`;
+        }
+    });
+  </script>
+</head>
+
+<body>
+<h2 id="log"></h2>
+<h3 id="event-log"></h3>
+</body>
+
+</html>
