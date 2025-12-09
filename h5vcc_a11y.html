@@ -4,9 +4,9 @@
   <script>
     window.addEventListener('load', () => {
       console.log("onload");
-        const log = document.getElementById("log");
-        log.innerText = h5vcc.accessibility.textToSpeech ? "tts enabled" : "tts disabled";
+        document.getElementById("log").innerText = h5vcc.accessibility.textToSpeech ? "tts enabled" : "tts disabled";
         h5vcc.accessibility.ontexttospeechchange = (ev) => {
+            document.getElementById("log").innerText = h5vcc.accessibility.textToSpeech ? "tts enabled" : "tts disabled";
             document.getElementById("event-log").innerText = `tts change event (${ev.timeStamp})`;
         }
     });
