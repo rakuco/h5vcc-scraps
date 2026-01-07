@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+  <script>
+    window.addEventListener('visibilitychange', () => {
+      console.log("visibilitychange");
+        document.getElementById("log").innerHTML += `hidden=${document.hidden}<br/>`;
+    });
+  </script>
+</head>
+
+<body bgcolor="#ead7dd">
+<h2 id="log"></h2>
+<h3 id="event-log"></h3>
+</body>
+
+</html>
